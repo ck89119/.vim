@@ -24,7 +24,7 @@ or wget:
 2. Install YCM
 
         cd bundle/YouCompleteMe
-        git submodule update --init
+        git submodule update --init --recursive
         sudo apt-get install build-essential cmake
         sudo apt-get install python-dev
         ./install.sh --clang-completer

@@ -1,0 +1,4 @@
+*.pyc
+.DS_Store
+bundle/VisIncr/doc/tags
+bundle/YankRing/doc/tags
