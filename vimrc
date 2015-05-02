@@ -6,7 +6,7 @@ let g:pathogen_disabled = []
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " GENERAL SETTINGS
 "---------------------------------------------------------------------------
 
@@ -79,13 +79,13 @@ filetype plugin on
   au FileType Makefile set noexpandtab
   " <TAB> width will be 4 spaces when editing python on OS X
   au FileType python set shiftwidth=2
-"}      							
+"}
 
 " status line {
 set laststatus=2
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
-set statusline+=\ \ \ [%{&ff}/%Y] 
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
+set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \
+set statusline+=\ \ \ [%{&ff}/%Y]
+set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
 set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
 
 function! CurDir()
@@ -115,7 +115,7 @@ if has("gui_running")
   " 256 color mode
   set t_Co=256
   " highlight current line
-  set cursorline          
+  set cursorline
   colors solarized
   highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 endif
@@ -124,17 +124,17 @@ endif
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " ENCODING SETTINGS
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 
-set encoding=utf-8                                  
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,cp936,latin1
 set ffs=unix,dos,mac
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " USEFUL SHORTCUTS
 "---------------------------------------------------------------------------
 
@@ -142,13 +142,13 @@ set ffs=unix,dos,mac
 let mapleader=","
 let g:mapleader=","
 
-" move to the below split 
+" move to the below split
 map <C-j> <C-W>j
-" move to the above split 
+" move to the above split
 map <C-k> <C-W>k
-" move to the left split 
+" move to the left split
 nmap <C-h> <C-W>h
-" move to the right split  
+" move to the right split
 nmap <C-l> <C-W>l
 
 " disable L, R, U, D keys
@@ -175,7 +175,7 @@ imap <Left> <Nop>
 " disable F1
 noremap <F1> <Esc>
 
-" go to prev tab 
+" go to prev tab
 map <S-H> gT
 " go to next tab
 map <S-L> gt
@@ -183,7 +183,7 @@ map <S-L> gt
 " new tab
 map <C-t><C-t> :tabnew<CR>
 " close tab
-map <C-t><C-w> :tabclose<CR> 
+map <C-t><C-w> :tabclose<CR>
 
 " ,/ turn off search highlighting
 nmap <leader>/ :nohl<CR>
@@ -199,12 +199,15 @@ cmap cd. lcd %:p:h
 vnoremap < <gv
 vnoremap > >gv
 
-"--------------------------------------------------------------------------- 
+" delete spaces at the end of lines
+nmap <silent> <leader>s :%s/\s\+$//<cr>
+
+"---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 
 " --- ctags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> 
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " --- cscope
 " set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -242,17 +245,17 @@ nmap ft :cs find t <C-R>=expand("<cword>")<CR><CR>
 " --- one-key compile and run
 nmap <leader>r :call CompileRunGpp()<CR>
 func! CompileRunGpp()
-exec "w" 
-exec "! 
+exec "w"
+exec "!
 \ clear;
 \ g++ % -o %<;
 \ ./%<;
 \ rm %<;"
-endfunc 
+endfunc
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " PLUGIN SETTINGS
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 
 " --- EasyMotion
 " let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
@@ -261,7 +264,7 @@ hi link EasyMotionShade  Comment
 
 " --- TagBar
 " toggle TagBar with F7
-nnoremap <silent> <F7> :TagbarToggle<CR> 
+nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
 
@@ -320,7 +323,7 @@ let g:haskell_enable_static_pointers = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " --- nerdtree
-map <F6> :NERDTreeToggle<CR> 
+map <F6> :NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeWinSize=30
