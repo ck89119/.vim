@@ -58,23 +58,23 @@ To install a new plugin as a git submoudle, type the following commands.
     `:NERDTree [name]` open the bookmark [name] in Nerd Tree   
     `F6` toggle the NerdTree
 
-* [nerdcommenter](https://github.com/scrooloose/nerdcommenter): Easy to (un)comment code. 
+* [nerdcommenter](https://github.com/scrooloose/nerdcommenter): Easy to (un)comment code.
 
-  Useful commands:
-    `,cc` comment out the current line or text selected in visual mode
-    `,cu` uncomments the selected line(s)
+  Useful commands:   
+    `,cc` comment out the current line or text selected in visual mode   
+    `,cu` uncomments the selected line(s)   
 
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe): A code-completion engine for Vim.
 
 * [UltiSnips](https://github.com/SirVer/ultisnips): The ultimate snippet solution for Vim.
 
-  Useful commands:
-    `F9` active related snippet
+  Useful commands:   
+    `F9` active related snippet   
 
 * [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): Deal with pairs of surroundings.
 
-  Useful commands:
-    `cs"'` inside `"Hello world!"`, then `"Hello world!"` => `'Hello world!'`
+  Useful commands:   
+    `cs"'` inside `"Hello world!"`, then `"Hello world!"` => `'Hello world!'`   
 
 * [YankRing](http://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
 
