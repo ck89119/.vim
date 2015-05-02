@@ -17,7 +17,7 @@ or wget:
 
 1. Check out from github
 
-        git clone git://github.com/ck89119/.vim.git
+        git clone git://github.com/ck89119/.vim.git ~/.vim
         cd ~/.vim
         git submodule update --init
 
@@ -31,6 +31,7 @@ or wget:
         
 3. Install ~/.vimrc
 
+        cd ~/.vim
         ./install-vimrc.sh
 
 ## INSTALL & UPGRADE PLUGIN BUNDLES
@@ -58,7 +59,7 @@ To install a new plugin as a git submoudle, type the following commands.
     `F6` toggle the NerdTree
 
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter): Easy to (un)comment code. 
-  
+
   Useful commands:
     `,cc` comment out the current line or text selected in visual mode
     `,cu` uncomments the selected line(s)
@@ -66,12 +67,12 @@ To install a new plugin as a git submoudle, type the following commands.
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe): A code-completion engine for Vim.
 
 * [UltiSnips](https://github.com/SirVer/ultisnips): The ultimate snippet solution for Vim.
-  
+
   Useful commands:
     `F9` active related snippet
 
 * [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): Deal with pairs of surroundings.
-  
+
   Useful commands:
     `cs"'` inside `"Hello world!"`, then `"Hello world!"` => `'Hello world!'`
 
