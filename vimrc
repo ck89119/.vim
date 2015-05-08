@@ -78,7 +78,7 @@ filetype plugin on
   set tabstop=2
   au FileType Makefile set noexpandtab
   " <TAB> width will be 4 spaces when editing python on OS X
-  au FileType python set shiftwidth=2
+  au FileType python set shiftwidth=4
 "}
 
 " status line {
@@ -321,6 +321,7 @@ let g:haskell_enable_static_pointers = 1
 
 " --- YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_highlighting = 0
 
 " --- nerdtree
 map <F6> :NERDTreeToggle<CR>
