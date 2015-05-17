@@ -108,7 +108,7 @@ if has("gui_running")
     let s:uname = system("uname")
       if s:uname == "Darwin\n"
         " Do Mac stuff here
-        set guifont=Monaco:h12
+        set guifont=Monaco\ for\ powerline:h12
       endif
   endif
   set background=dark
