@@ -124,6 +124,16 @@ endif
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+" change cursor shape in different modes
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
+endif
+
 "---------------------------------------------------------------------------
 " ENCODING SETTINGS
 "---------------------------------------------------------------------------

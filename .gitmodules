@@ -28,9 +28,6 @@
 [submodule "bundle/VisIncr"]
 	path = bundle/VisIncr
 	url = git@github.com:vim-scripts/VisIncr.git
-[submodule "bundle/YankRing"]
-	path = bundle/YankRing
-	url = git@github.com:vim-scripts/YankRing.vim.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
