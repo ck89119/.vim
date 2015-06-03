@@ -129,8 +129,8 @@ if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
     " Do Mac stuff here
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+    "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   endif
 endif
 
@@ -204,6 +204,12 @@ cnoremap <C-E> <End>
 
 " :cd. change working directory to that of the current file
 cmap cd. lcd %:p:h
+
+" :si change I64d to lld
+cmap si %s/I64d/lld/g
+
+" :sl change lld to I64d 
+cmap sl %s/lld/I64d/g
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv

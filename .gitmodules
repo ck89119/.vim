@@ -25,9 +25,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
-[submodule "bundle/VisIncr"]
-	path = bundle/VisIncr
-	url = git@github.com:vim-scripts/VisIncr.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
