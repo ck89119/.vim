@@ -54,7 +54,7 @@ set hlsearch
 set cursorline
 highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 " 256 color mode
-set t_Co=256
+"set t_Co=256
 
 " code folding
 set foldmethod=indent
@@ -267,7 +267,7 @@ func! CompileRunGpp()
 exec "w"
 exec "!
 \ clear;
-\ g++ % -o %<;
+\ g++ -std=c++11 % -o %<;
 \ ./%<;
 \ rm %<;"
 endfunc
