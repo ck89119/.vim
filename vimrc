@@ -50,6 +50,11 @@ set smartcase
 set smarttab
 " search highlighting
 set hlsearch
+" highlight current line
+set cursorline
+highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
+" 256 color mode
+set t_Co=256
 
 " code folding
 set foldmethod=indent
@@ -112,14 +117,12 @@ if has("gui_running")
       endif
   endif
   set background=dark
-  " 256 color mode
-  set t_Co=256
-  " highlight current line
-  set cursorline
   colors solarized
-  highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 endif
 
+  
+  
+  
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
