@@ -19,12 +19,11 @@ or wget:
 
         git clone git://github.com/ck89119/.vim.git ~/.vim
         cd ~/.vim
-        git submodule update --init
+        git submodule update --init --recursive
 
 2. Install YCM
 
         cd bundle/YouCompleteMe
-        git submodule update --init --recursive
         sudo apt-get install build-essential cmake
         sudo apt-get install python-dev
         ./install.sh --clang-completer
@@ -75,12 +74,6 @@ To install a new plugin as a git submoudle, type the following commands.
 
   Useful commands:   
     `cs"'` inside `"Hello world!"`, then `"Hello world!"` => `'Hello world!'`   
-
-* [YankRing](http://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
-
-* [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
-
-* [JavaComplete](http://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
 
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion): An easy way to jump to a word.
 
