@@ -272,6 +272,17 @@ exec "!
 \ rm %<;"
 endfunc
 
+" --- one-key compile and debug 
+nmap <leader>d :call CompileDebugGpp()<CR>
+func! CompileDebugGpp()
+exec "w"
+exec "!
+\ clear;
+\ g++ -std=c++11 -g % -o %<;
+\ lldb %<;
+\ rm %<;"
+endfunc
+
 "---------------------------------------------------------------------------
 " PLUGIN SETTINGS
 "---------------------------------------------------------------------------

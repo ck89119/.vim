@@ -1,9 +1,11 @@
 #!/bin/sh
 
-[ -e "~/.vim" ] && rm -rf ~/.vim
-[ -e "~/.vimrc" ] && rm ~/.vimrc
+cd ~
+[ -e ".vimrc" ] && rm .vimrc
+[ -e ".vim" ] && rm -rf .vim
 
-git clone https://github.com:ck89119/.vim.git ~/.vim
+git clone https://github.com/ck89119/.vim.git ~/.vim
+
 cd ~/.vim
 git submodule update --init --recursive
 

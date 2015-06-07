@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd ~
-ln -s .vim/vimrc .vimrc
+ln .vim/vimrc .vimrc
