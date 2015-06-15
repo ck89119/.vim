@@ -2,4 +2,4 @@
 
 cd ~
 [ -e ".vimrc" ] && rm .vimrc
-ln .vim/vimrc .vimrc
+ln -s .vim/vimrc .vimrc
