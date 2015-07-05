@@ -351,7 +351,8 @@ let g:haskell_enable_typeroles = 1
 let g:haskell_enable_static_pointers = 1
 
 " --- YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/conf/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting = 0
 
 " --- nerdtree
@@ -364,8 +365,9 @@ set guioptions-=L
 
 " --- ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsExpandTrigger="<F9>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.vim/conf']
