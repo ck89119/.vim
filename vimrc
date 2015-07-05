@@ -262,19 +262,36 @@ nmap fs :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap ft :cs find t <C-R>=expand("<cword>")<CR><CR>
 
 " --- one-key compile and run
-nmap <leader>r :call CompileRunGpp()<CR>
-func! CompileRunGpp()
+nmap <leader>r :call CompileAndRun()<CR>
+func! CompileAndRun()
 exec "w"
-exec "!
-\ clear;
-\ g++ -std=c++11 % -o %<;
-\ ./%<;
-\ rm %<;"
+if &filetype=="cpp"
+  exec "!
+  \ clear;
+  \ g++ -std=c++11 % -o %<;
+  \ ./%<;
+  \ rm %<;"
+elseif &filetype=="c" 
+  exec "!
+  \ clear;
+  \ gcc % -o %<;
+  \ ./%<;
+  \ rm %<;"
+elseif &filetype=="sh"
+  exec "!
+  \ clear;
+  \ chmod a+x %;
+  \ ./%;"
+elseif &filetype=="python"
+  exec "!
+  \ clear;
+  \ python %;"
+endif
 endfunc
 
 " --- one-key compile and debug 
-nmap <leader>d :call CompileDebugGpp()<CR>
-func! CompileDebugGpp()
+nmap <leader>d :call CompileAndDebug()<CR>
+func! CompileAndDebug()
 exec "w"
 exec "!
 \ clear;
@@ -370,4 +387,12 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.vim/conf']
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "conf"]
+
+" --- python-mode
+" Override go-to.definition key shortcut to Ctrl-]
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+" Override run current python file key shortcut to Ctrl-Shift-e
+let g:pymode_run_bind = "<C-S-e>"
+" Override view python doc key shortcut to Ctrl-Shift-d
+let g:pymode_doc_bind = "<C-S-d>"
