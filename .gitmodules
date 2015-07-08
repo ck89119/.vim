@@ -31,6 +31,3 @@
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = git@github.com:raichoo/haskell-vim.git
-[submodule "bundle/python-mode"]
-	path = bundle/python-mode
-	url = https://github.com/klen/python-mode
