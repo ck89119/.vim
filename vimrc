@@ -388,7 +388,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "conf"]
-
-" --- python-mode
-" Override go-to.definition key shortcut to Ctrl-]
-let g:pymode_rope_goto_definition_bind = "<C-]>"
