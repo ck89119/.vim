@@ -152,8 +152,8 @@ set ffs=unix,dos,mac
 "---------------------------------------------------------------------------
 
 " set leader to ,
-let mapleader=","
-let g:mapleader=","
+let mapleader=" "
+let g:mapleader=" "
 
 " move to the below split
 map <C-j> <C-W>j
