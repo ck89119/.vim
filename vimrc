@@ -120,9 +120,9 @@ if has("gui_running")
   colors solarized
 endif
 
-  
-  
-  
+
+
+
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -156,13 +156,13 @@ let mapleader=" "
 let g:mapleader=" "
 
 " move to the below split
-map <C-j> <C-W>j
+map <leader>wj <C-W>j
 " move to the above split
-map <C-k> <C-W>k
+map <leader>wk <C-W>k
 " move to the left split
-nmap <C-h> <C-W>h
+nmap <leader>wh <C-W>h
 " move to the right split
-nmap <C-l> <C-W>l
+nmap <leader>wl <C-W>l
 
 " disable L, R, U, D keys
 nmap oa <Nop>
@@ -198,28 +198,22 @@ map <C-t><C-t> :tabnew<CR>
 " close tab
 map <C-t><C-w> :tabclose<CR>
 
-" ,/ turn off search highlighting
+" turn off search highlighting
 nmap <leader>/ :nohl<CR>
 
 " Bash like keys for the command line
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 
-" :cd. change working directory to that of the current file
-cmap cd. lcd %:p:h
-
-" :si change I64d to lld
-cmap si %s/I64d/lld/g
-
-" :sl change lld to I64d 
-cmap sl %s/lld/I64d/g
+" change working directory to that of the current file
+nmap <leader>. :lcd %:p:h<CR>
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
 vnoremap > >gv
 
 " delete spaces at the end of lines
-nmap <silent> <leader>s :%s/\s\+$//<cr>
+nmap <silent> <leader>s :%s/\s\+$//<CR>
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
@@ -271,7 +265,7 @@ if &filetype=="cpp"
   \ g++ -std=c++11 % -o %<;
   \ ./%<;
   \ rm %<;"
-elseif &filetype=="c" 
+elseif &filetype=="c"
   exec "!
   \ clear;
   \ gcc % -o %<;
@@ -289,7 +283,7 @@ elseif &filetype=="python"
 endif
 endfunc
 
-" --- one-key compile and debug 
+" --- one-key compile and debug
 nmap <leader>d :call CompileAndDebug()<CR>
 func! CompileAndDebug()
 exec "w"
