@@ -349,7 +349,7 @@ let g:haskell_enable_static_pointers = 1
 
 " --- YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf = '~/.vim/conf/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/private/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting = 0
 
 " --- nerdtree
@@ -367,4 +367,4 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "conf"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
