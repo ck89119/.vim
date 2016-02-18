@@ -175,14 +175,13 @@ imap <Left> <Nop>
 noremap <F1> <Esc>
 
 " go to prev tab
-map <S-H> gT
+nmap <C-H> gT
 " go to next tab
-map <S-L> gt
-
+nmap <C-L> gt
 " new tab
-map <C-t><C-t> :tabnew<CR>
+nmap <C-T> :tabnew<CR>
 " close tab
-map <C-t><C-w> :tabclose<CR>
+" nmap <C-W> :tabclose<CR>
 
 " turn off search highlighting
 nmap <leader>/ :nohl<CR>
@@ -192,14 +191,14 @@ cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 
 " change working directory to that of the current file
-nmap <leader>. :lcd %:p:h<CR>
+nnoremap <leader>. :lcd %:p:h<CR>
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
 vnoremap > >gv
 
 " delete spaces at the end of lines
-nmap <leader>s :%s/\s\+$//<CR>
+nnoremap <leader>s :%s/\s\+$//<CR>
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
@@ -266,6 +265,10 @@ elseif &filetype=="python"
   exec "!
   \ clear;
   \ python %;"
+elseif &filetype=="scheme"
+  exec "!
+  \ clear;
+  \ scheme < %;"
 endif
 endfunc
 
