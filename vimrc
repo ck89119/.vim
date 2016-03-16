@@ -204,11 +204,9 @@ nnoremap <leader>s :%s/\s\+$//<CR>
 " PROGRAMMING SHORTCUTS
 "---------------------------------------------------------------------------
 
-" --- ctags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 " --- cscope
 " set cscopequickfix=s-,c-,d-,i-,t-,e-
+nmap <F8> :!cscope -Rbq <CR>
 if has("cscope")
   if has("unix")
     set csprg=/usr/bin/cscope
