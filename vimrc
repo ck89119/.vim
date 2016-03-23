@@ -54,7 +54,9 @@ set hlsearch
 set cursorline
 highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 " 256 color mode
-"set t_Co=256
+set t_Co=256
+" relative number
+set relativenumber
 
 " code folding
 set foldmethod=indent
@@ -257,8 +259,7 @@ elseif &filetype=="c"
 elseif &filetype=="sh"
   exec "!
   \ clear;
-  \ chmod a+x %;
-  \ ./%;"
+  \ bash %;"
 elseif &filetype=="python"
   exec "!
   \ clear;

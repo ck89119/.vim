@@ -83,6 +83,10 @@ flags = [
 #'./tests/gmock/include',
 '-I',
 '/Users/LoveYY/Develop/apue.3e/include',
+'-I',
+'/Users/LoveYY/Develop/leveldb',
+'-I',
+'/Users/LoveYY/Develop/leveldb/include',
 ]
 
 
