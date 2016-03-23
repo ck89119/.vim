@@ -51,8 +51,8 @@ set smarttab
 " search highlighting
 set hlsearch
 " highlight current line
-set cursorline
-highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
+"set cursorline
+"highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 " 256 color mode
 set t_Co=256
 " relative number
