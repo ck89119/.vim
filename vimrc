@@ -57,6 +57,8 @@ set hlsearch
 set t_Co=256
 " relative number
 set relativenumber
+" enable mouse
+set mouse=a
 
 " code folding
 set foldmethod=indent
