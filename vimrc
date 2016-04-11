@@ -204,6 +204,9 @@ vnoremap > >gv
 " delete spaces at the end of lines
 nnoremap <leader>s :%s/\s\+$//<CR>
 
+" search and highlight current word
+nmap <leader>h :/<C-R>=expand("<cword>")<CR><CR>
+
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
 "---------------------------------------------------------------------------
@@ -363,6 +366,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:NERDTreeWinSize=30
 set guioptions-=T
 set guioptions-=L
+let NERDTreeIgnore = ['\.pyc$', '\.o$']
 
 " --- ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
