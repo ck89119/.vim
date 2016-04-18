@@ -378,4 +378,4 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
 " --syntastic
-let g:syntastic_python_checkers = ['python']
+"let g:syntastic_python_checkers = ['python']
