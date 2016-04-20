@@ -377,5 +377,20 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
-" --syntastic
+" -- syntastic
 "let g:syntastic_python_checkers = ['python']
+
+" -- vim-go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>ds <Plug>(go-def-split)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>i <Plug>(go-info)
