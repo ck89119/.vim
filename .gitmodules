@@ -46,3 +46,6 @@
 [submodule "bundle/vim-bufferline"]
 	path = bundle/vim-bufferline
 	url = git@github.com:bling/vim-bufferline.git
+[submodule "bundle/vim-swoop"]
+	path = bundle/vim-swoop
+	url = git@github.com:pelodelfuego/vim-swoop.git
