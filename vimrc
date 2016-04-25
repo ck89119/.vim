@@ -20,7 +20,7 @@ set history=50
 set ruler
 " auto read when file is changed from outside
 set autoread
-" shwo line number
+" show line number
 set number
 " yank to the system register (*) by default
 set clipboard=unnamed
@@ -59,6 +59,8 @@ set t_Co=256
 set relativenumber
 " enable mouse
 set mouse=a
+" improve screen refresh for terminal vim
+set ttyfast                  
 
 " code folding
 set foldmethod=indent
@@ -213,7 +215,7 @@ nmap <leader>h :/<C-R>=expand("<cword>")<CR><CR>
 
 " --- cscope
 " set cscopequickfix=s-,c-,d-,i-,t-,e-
-nmap <F8> :!cscope -Rbq <CR>
+" nmap <F8> :!cscope -Rbq <CR>
 if has("cscope")
   if has("unix")
     set csprg=/usr/bin/cscope
@@ -298,8 +300,8 @@ hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
 " --- TagBar
-" toggle TagBar with F7
-nnoremap <silent> <F7> :TagbarToggle<CR>
+" toggle TagBar with F8
+nnoremap <silent> <F8> :TagbarToggle<CR>
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
 
