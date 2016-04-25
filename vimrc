@@ -160,25 +160,25 @@ nmap <leader>wh <C-W>h
 nmap <leader>wl <C-W>l
 
 " disable L, R, U, D keys
-nmap oa <Nop>
-nmap ob <Nop>
-nmap oc <Nop>
-nmap od <Nop>
+" nmap oa <Nop>
+" nmap ob <Nop>
+" nmap oc <Nop>
+" nmap od <Nop>
 
-imap oa <Nop>
-imap ob <Nop>
-imap oc <Nop>
-imap od <Nop>
+" imap oa <Nop>
+" imap ob <Nop>
+" imap oc <Nop>
+" imap od <Nop>
 
-nmap <Up> <Nop>
-nmap <Down> <Nop>
-nmap <Right> <Nop>
-nmap <Left> <Nop>
+" nmap <Up> <Nop>
+" nmap <Down> <Nop>
+" nmap <Right> <Nop>
+" nmap <Left> <Nop>
 
-imap <Up> <Nop>
-imap <Down> <Nop>
-imap <Right> <Nop>
-imap <Left> <Nop>
+" imap <Up> <Nop>
+" imap <Down> <Nop>
+" imap <Right> <Nop>
+" imap <Left> <Nop>
 
 " disable F1
 noremap <F1> <Esc>
@@ -211,6 +211,10 @@ nnoremap <leader>s :%s/\s\+$//<CR>
 
 " search and highlight current word
 nmap <leader>h :/<C-R>=expand("<cword>")<CR><CR>
+
+" shortcut for cnext
+nmap <C-J> :cnext<CR>
+nmap <C-K> :cprevious<CR>
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
