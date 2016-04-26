@@ -55,3 +55,6 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/minibufexpl"]
+	path = bundle/minibufexpl
+	url = git@github.com:fholgado/minibufexpl.vim.git
