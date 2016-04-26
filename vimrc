@@ -159,27 +159,6 @@ nmap <leader>wh <C-W>h
 " move to the right split
 nmap <leader>wl <C-W>l
 
-" disable L, R, U, D keys
-" nmap oa <Nop>
-" nmap ob <Nop>
-" nmap oc <Nop>
-" nmap od <Nop>
-
-" imap oa <Nop>
-" imap ob <Nop>
-" imap oc <Nop>
-" imap od <Nop>
-
-" nmap <Up> <Nop>
-" nmap <Down> <Nop>
-" nmap <Right> <Nop>
-" nmap <Left> <Nop>
-
-" imap <Up> <Nop>
-" imap <Down> <Nop>
-" imap <Right> <Nop>
-" imap <Left> <Nop>
-
 " disable F1
 noremap <F1> <Esc>
 
@@ -326,28 +305,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" unicode symbols
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.linenr = '␊'
-"let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_buffers = 1
 
-" old vim-powerline symbols
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.readonly = '⭤'
-"let g:airline_symbols.linenr = '⭡'
 
 " --- haskell-vim
 " to enable highlighting of forall
