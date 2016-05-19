@@ -252,6 +252,10 @@ elseif &filetype=="sh"
   exec "!
   \ clear;
   \ bash %;"
+elseif &filetype=="python"
+  exec "!
+  \ clear;
+  \ python %;"
 elseif &filetype=="scheme"
   exec "!
   \ clear;
@@ -341,10 +345,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
-" -- syntastic
-let g:syntastic_python_checkers = ['flake8']
-autocmd BufWritePost,FileWritePost *.py execute Flake8() | cwindow
-
 " -- vim-go
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -364,3 +364,9 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " -- nerdcommenter
 let NERDSpaceDelims=1
+
+" -- python-mode
+let g:pymode_run = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_goto_definition_bind = '<C-]>'
+let g:pymode_rope_goto_definition_cmd = 'vnew'
