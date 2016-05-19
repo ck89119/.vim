@@ -252,10 +252,6 @@ elseif &filetype=="sh"
   exec "!
   \ clear;
   \ bash %;"
-elseif &filetype=="python"
-  exec "!
-  \ clear;
-  \ python %;"
 elseif &filetype=="scheme"
   exec "!
   \ clear;
@@ -346,8 +342,8 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
 " -- syntastic
-"let g:syntastic_python_checkers = ['python']
-autocmd BufWritePost,FileWritePost *.py execute 'Lint' | cwindow
+let g:syntastic_python_checkers = ['flake8']
+autocmd BufWritePost,FileWritePost *.py execute Flake8() | cwindow
 
 " -- vim-go
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
