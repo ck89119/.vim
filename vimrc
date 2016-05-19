@@ -60,11 +60,8 @@ set relativenumber
 " enable mouse
 set mouse=a
 " improve screen refresh for terminal vim
-set ttyfast                  
-" Use "∙" for trailing spaces
-set list listchars=trail:∙       
-set fillchars+=vert:                    " set vertical fillchar to "en space" (it's there, trust
-                                          " me) for tab splits
+set ttyfast
+
 " code folding
 set foldmethod=indent
 set nofoldenable
@@ -87,11 +84,13 @@ filetype plugin on
 " TAB setting{
   " replace <TAB> with spaces
   set expandtab
-  set shiftwidth=2
+  set shiftwidth=4
+  set tabstop=4
+  set softtabstop=4
   " do not replace <TAB> with spaces in Makefile
   au FileType Makefile set noexpandtab
-  " <TAB> width will be 4 spaces when editing python on OS X
-  au FileType python set shiftwidth=4
+  " <TAB> width will be 2 spaces when editing cpp file
+  au FileType cpp set shiftwidth=2 tabstop=2 softtabstop=2
 "}
 
 " status line {
@@ -306,7 +305,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 
 " --- haskell-vim
@@ -348,8 +347,10 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
 " -- syntastic
 "let g:syntastic_python_checkers = ['python']
+autocmd BufWritePost,FileWritePost *.py execute 'Lint' | cwindow
 
 " -- vim-go
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
@@ -363,6 +364,7 @@ au FileType go nmap <leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>i <Plug>(go-info)
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " -- nerdcommenter
 let NERDSpaceDelims=1
