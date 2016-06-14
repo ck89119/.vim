@@ -64,3 +64,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git@github.com:klen/python-mode.git
+[submodule "bundle/haskell-vim"]
+	path = bundle/haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim
