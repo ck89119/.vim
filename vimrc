@@ -237,16 +237,24 @@ nmap <leader>r :call CompileAndRun()<CR>
 func! CompileAndRun()
 exec "w"
 if &filetype=="cpp"
-  exec "!
+  execute "! 
   \ clear;
   \ g++ -std=c++11 % -o %<;
+  \ start=$(gdate +\\%s.\\%N);
   \ ./%<;
+  \ end=$(gdate +\\%s.\\%N);
+  \ diff=$(( $end - $start ));
+  \ echo it took $diff seconds;
   \ rm %<;"
 elseif &filetype=="c"
   exec "!
   \ clear;
   \ gcc % -o %<;
+  \ start=$(date +\\%s.\\%N);
   \ ./%<;
+  \ end=$(date +\\%s.\\%N);
+  \ diff=$(( $end - $start ));
+  \ echo it took $diff seconds;
   \ rm %<;"
 elseif &filetype=="sh"
   exec "!
