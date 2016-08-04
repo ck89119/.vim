@@ -166,7 +166,7 @@ nmap <C-H> gT
 " go to next tab
 nmap <C-L> gt
 " new tab
-nmap <C-T> :tabnew<CR>
+nnoremap <C-T> :tabnew<CR>
 " close tab
 " nmap <C-W> :tabclose<CR>
 
