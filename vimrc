@@ -150,21 +150,21 @@ let mapleader=" "
 let g:mapleader=" "
 
 " move to the below split
-map <leader>wj <C-W>j
+map <C-j> <C-W>j
 " move to the above split
-map <leader>wk <C-W>k
+map <C-k> <C-W>k
 " move to the left split
-nmap <leader>wh <C-W>h
+map <C-h> <C-W>h
 " move to the right split
-nmap <leader>wl <C-W>l
+map <C-l> <C-W>l
 
 " disable F1
 noremap <F1> <Esc>
 
 " go to prev tab
-nmap <C-H> gT
+" nmap <C-H> gT
 " go to next tab
-nmap <C-L> gt
+" nmap <C-L> gt
 " new tab
 " nnoremap <C-T> :tabnew<CR>
 " close tab
@@ -191,8 +191,8 @@ nnoremap <leader>s :%s/\s\+$//<CR>
 nmap <leader>h :/<C-R>=expand("<cword>")<CR><CR>
 
 " shortcut for cnext
-nmap <C-J> :cnext<CR>
-nmap <C-K> :cprevious<CR>
+" nmap <C-J> :cnext<CR>
+" nmap <C-K> :cprevious<CR>
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
