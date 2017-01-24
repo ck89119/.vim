@@ -67,3 +67,6 @@
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "bundle/vim-gocode"]
+	path = bundle/vim-gocode
+	url = https://github.com/Blackrush/vim-gocode
