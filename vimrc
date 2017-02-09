@@ -380,3 +380,6 @@ let g:pymode_run = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
+
+" -- syntastic
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
