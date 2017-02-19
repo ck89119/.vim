@@ -61,6 +61,8 @@ set relativenumber
 set mouse=a
 " improve screen refresh for terminal vim
 set ttyfast
+" set directory color
+highlight Directory ctermfg=cyan
 
 " code folding
 set foldmethod=indent
