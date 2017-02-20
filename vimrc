@@ -344,7 +344,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " --- nerdtree
 map <F6> :NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeWinSize=30
 set guioptions-=T
 set guioptions-=L
@@ -370,9 +370,9 @@ au FileType go nmap <leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>gd <Plug>(go-doc)
 au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>s <Plug>(go-implements)
+au FileType go nmap <leader>e <Plug>(go-rename)
+au FileType go nmap <leader>i <Plug>(go-info)
 
 " -- nerdcommenter
 let NERDSpaceDelims=1
