@@ -152,13 +152,16 @@ let mapleader=" "
 let g:mapleader=" "
 
 " move to the below split
-map <C-j> <C-W>j
+map <C-J> <C-W>j
 " move to the above split
-map <C-k> <C-W>k
+map <C-K> <C-W>k
 " move to the left split
-map <C-h> <C-W>h
+map <C-H> <C-W>h
 " move to the right split
-map <C-l> <C-W>l
+map <C-L> <C-W>l
+" open in new vertical split when find declaration
+map <C-W>] :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
+
 
 " disable F1
 noremap <F1> <Esc>
@@ -384,4 +387,4 @@ let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
 
 " -- syntastic
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']

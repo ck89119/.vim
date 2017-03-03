@@ -87,6 +87,8 @@ flags = [
 '/Users/LoveYY/Develop/leveldb',
 '-I',
 '/Users/LoveYY/Develop/leveldb/include',
+'-I',
+'/Users/LoveYY/Develop/redis-3.0-annotated/src',
 ]
 
 
