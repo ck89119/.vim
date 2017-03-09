@@ -2,15 +2,11 @@ snippet stdc++ "head file"
 #include <bits/stdc++.h>
 using namespace std;
 
-#define dump(x) cerr <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
+#define dump(x) cout <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
 #define clr(a, x) memset(a, x, sizeof(a)) //0:0, -1:-1, INF:0x3f, -INF:0xc0
 #define mp(a, b) make_pair(a, b)
 #define pb(a) push_back(a)
-#define lson l, m, rt << 1
-#define rson m + 1, r, rt << 1 | 1
 #define lowbit(x) x & (-x)
-#define X first
-#define Y second
 typedef long long ll;
 typedef pair<int, int> pii;
 
@@ -55,15 +51,11 @@ snippet head "head file"
 #include <ctime>
 using namespace std;
 
-#define dump(x) cerr <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
+#define dump(x) cout <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
 #define clr(a, x) memset(a, x, sizeof(a)) //0:0, -1:-1, INF:0x3f, -INF:0xc0
 #define mp(a, b) make_pair(a, b)
 #define pb(a) push_back(a)
-#define lson l, m, rt << 1
-#define rson m + 1, r, rt << 1 | 1
 #define lowbit(x) x & (-x)
-#define X first
-#define Y second
 typedef long long ll;
 typedef pair<int, int> pii;
 
@@ -95,5 +87,5 @@ class ${1:`!p snip.rv = snip.basename or "name"`} {
 endsnippet
 
 snippet dump "head file"
-#define dump(x) cerr <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
+#define dump(x) cout <<  __LINE__ << " : "<< #x << "  =  " << (x) << endl
 endsnippet
