@@ -202,6 +202,9 @@ nnoremap <leader>j :%!python -m json.tool<CR>
 " nmap <C-J> :cnext<CR>
 " nmap <C-K> :cprevious<CR>
 
+" ctrl-c as <esc>
+imap <C-C> <ESC>
+
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
 "---------------------------------------------------------------------------
@@ -225,8 +228,9 @@ if has("cscope")
   if filereadable("cscope.out")
       cs add cscope.out
   " else add database pointed to by environment
-  " elseif $CSCOPE_DB != ""
-      "cs add $CSCOPE_DB
+  elseif $CSCOPE_DB != ""
+      cd /Users/LoveYY/Develop
+      cs add $CSCOPE_DB
   endif
   set csverb
 endif
