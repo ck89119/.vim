@@ -26,7 +26,7 @@ or wget:
         cd bundle/YouCompleteMe
         sudo apt-get install build-essential cmake
         sudo apt-get install python-dev
-        ./install.sh --clang-completer
+        ./install.py --clang-completer
         
 3. Install ~/.vimrc
 
