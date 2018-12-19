@@ -401,6 +401,7 @@ au FileType go nmap <leader>i <Plug>(go-info)
 
 " -- nerdcommenter
 let NERDSpaceDelims=1
+let g:NERDDefaultAlign='start'
 
 " -- python-mode
 let g:pymode_run = 0
