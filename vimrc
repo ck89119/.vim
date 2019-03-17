@@ -345,7 +345,6 @@ let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
-
 " --- haskell-vim
 " to enable highlighting of forall
 let g:haskell_enable_quantification = 1
@@ -365,6 +364,9 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/private/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+autocmd FileType c map <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType cpp map <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType python map <C-]> :YcmCompleter GoTo<CR>
 
 " --- nerdtree
 map <F6> :NERDTreeToggle<CR>
@@ -410,4 +412,13 @@ let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
 
 " -- syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']
+let g:syntastic_python_checkers = ['flake8']
