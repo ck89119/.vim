@@ -92,6 +92,8 @@ flags = [
 '-I',
 '/Users/LoveYY/Develop/abseil-cpp',
 '-I',
+'/Users/LoveYY/Develop/jdk7u-hotspot/src',
+'-I',
 '/Users/LoveYY/Develop/jdk7u-hotspot/src/share/vm',
 '-I',
 '/Users/LoveYY/Develop/jdk7u-hotspot/src/share/vm/precompiled',
