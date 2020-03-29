@@ -222,7 +222,7 @@ imap <C-C> <ESC>
 " vnoremap c "_c
 " nnoremap C "_C
 " vnoremap C "_C
-xnoremap p "_dP
+vnoremap p "_dP
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
@@ -402,8 +402,8 @@ au FileType go nmap <leader>e <Plug>(go-rename)
 au FileType go nmap <leader>i <Plug>(go-info)
 
 " -- nerdcommenter
-" let NERDSpaceDelims=1
-let g:NERDDefaultAlign='start'
+let g:NERDSpaceDelims=1
+let g:NERDDefaultAlign='left'
 
 " -- python-mode
 let g:pymode_run = 0
