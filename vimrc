@@ -318,9 +318,17 @@ endfunc
 "---------------------------------------------------------------------------
 "
 " --- EasyMotion
-" let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionShade  Comment
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+" " Move to line
+" map <Leader>L <Plug>(easymotion-bd-jk)
+" nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " --- TagBar
 " toggle TagBar with F8
@@ -386,7 +394,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
-" -- vim-go
+" --- vim-go
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
@@ -401,17 +409,17 @@ au FileType go nmap <leader>s <Plug>(go-implements)
 au FileType go nmap <leader>e <Plug>(go-rename)
 au FileType go nmap <leader>i <Plug>(go-info)
 
-" -- nerdcommenter
+" --- nerdcommenter
 let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign='left'
 
-" -- python-mode
+" --- python-mode
 let g:pymode_run = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
 
-" -- syntastic
+" --- syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -422,3 +430,4 @@ set statusline+=%*
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']
 let g:syntastic_python_checkers = ['flake8']
+

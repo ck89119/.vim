@@ -9,7 +9,7 @@
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
+	url = git@github.com:easymotion/vim-easymotion.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
