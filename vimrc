@@ -228,40 +228,6 @@ vnoremap p "_dP
 " PROGRAMMING SHORTCUTS
 "---------------------------------------------------------------------------
 
-" --- cscope
-" set cscopequickfix=s-,c-,d-,i-,t-,e-
-" nmap <F8> :!cscope -Rbq <CR>
-if has("cscope")
-  if has("unix")
-    set csprg=/usr/bin/cscope
-    let s:uname = system("uname")
-      if s:uname == "Darwin\n"
-        " Do Mac stuff here
-        set csprg=/usr/local/bin/cscope
-      endif
-  endif
-  set csto=0
-  set cst
-  set nocsverb
-  " add any database in current directory
-  if filereadable("cscope.out")
-      cs add cscope.out
-  " else add database pointed to by environment
-  " elseif $CSCOPE_DB != ""
-  "     cs add $CSCOPE_DB
-  endif
-  set csverb
-endif
-
-nmap fc :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap fd :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap fe :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap fg :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap fi :cs find i <C-R>=expand("<cfile>")<CR><CR>
-nmap fs :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap ft :cs find t <C-R>=expand("<cword>")<CR><CR>
-
 " --- one-key compile and run
 nmap <leader>r :call CompileAndRun()<CR>
 func! CompileAndRun()
@@ -319,7 +285,7 @@ endfunc
 "
 " --- EasyMotion
 " <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
+map <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
@@ -327,7 +293,7 @@ nmap s <Plug>(easymotion-overwin-f2)
 " map <Leader>L <Plug>(easymotion-bd-jk)
 " nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " --- TagBar
