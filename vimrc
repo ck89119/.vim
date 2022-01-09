@@ -225,61 +225,6 @@ imap <C-C> <ESC>
 vnoremap p "_dP
 
 "---------------------------------------------------------------------------
-" PROGRAMMING SHORTCUTS
-"---------------------------------------------------------------------------
-
-" --- one-key compile and run
-nmap <leader>r :call CompileAndRun()<CR>
-func! CompileAndRun()
-exec "w"
-if &filetype=="cpp"
-  execute "! 
-  \ clear;
-  \ g++ -std=c++11 % -o %<;
-  \ start=$(gdate +\\%s.\\%N);
-  \ ./%<;
-  \ end=$(gdate +\\%s.\\%N);
-  \ diff=$(( $end - $start ));
-  \ echo it took $diff seconds;
-  \ rm %<;"
-elseif &filetype=="c"
-  exec "!
-  \ clear;
-  \ gcc % -o %<;
-  \ start=$(date +\\%s.\\%N);
-  \ ./%<;
-  \ end=$(date +\\%s.\\%N);
-  \ diff=$(( $end - $start ));
-  \ echo it took $diff seconds;
-  \ rm %<;"
-elseif &filetype=="sh"
-  exec "!
-  \ clear;
-  \ bash %;"
-elseif &filetype=="python"
-  exec "!
-  \ clear;
-  \ python %;"
-elseif &filetype=="scheme"
-  exec "!
-  \ clear;
-  \ scheme < %;"
-endif
-endfunc
-
-" --- one-key compile and debug
-nmap <leader>d :call CompileAndDebug()<CR>
-func! CompileAndDebug()
-exec "w"
-exec "!
-\ clear;
-\ g++ -std=c++11 -g % -o %<;
-\ lldb %<;
-\ rm %<;
-\ rm -rf %<.dSYM;"
-endfunc
-
-"---------------------------------------------------------------------------
 " PLUGIN SETTINGS
 "---------------------------------------------------------------------------
 "
