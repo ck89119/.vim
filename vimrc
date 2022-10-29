@@ -55,8 +55,6 @@ set hlsearch
 "highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 " 256 color mode
 set t_Co=256
-" relative number
-set relativenumber
 " enable mouse
 set mouse=a
 " improve screen refresh for terminal vim
@@ -201,7 +199,7 @@ nnoremap <leader>s :%s/\s\+$//<CR>
 nmap <leader>h :/<C-R>=expand("<cword>")<CR><CR>
 
 " json format
-nnoremap <leader>j :%!python -m json.tool<CR>
+nnoremap <leader>j :%!python -m json.tool --no-ensure-ascii<CR>
 
 " shortcut for cnext
 " nmap <C-J> :cnext<CR>
