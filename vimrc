@@ -262,19 +262,19 @@ let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
-" --- haskell-vim
-" to enable highlighting of forall
-let g:haskell_enable_quantification = 1
-" to enable highlighting of mdo and rec
-let g:haskell_enable_recursivedo = 1
-" to enable highlighting of proc
-let g:haskell_enable_arrowsyntax = 1
-" to enable highlighting of pattern
-let g:haskell_enable_pattern_synonyms = 1
-" to enable highlighting of type roles
-let g:haskell_enable_typeroles = 1
-" to enable highlighting of static
-let g:haskell_enable_static_pointers = 1
+" " --- haskell-vim
+" " to enable highlighting of forall
+" let g:haskell_enable_quantification = 1
+" " to enable highlighting of mdo and rec
+" let g:haskell_enable_recursivedo = 1
+" " to enable highlighting of proc
+" let g:haskell_enable_arrowsyntax = 1
+" " to enable highlighting of pattern
+" let g:haskell_enable_pattern_synonyms = 1
+" " to enable highlighting of type roles
+" let g:haskell_enable_typeroles = 1
+" " to enable highlighting of static
+" let g:haskell_enable_static_pointers = 1
 
 " --- YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/private/.ycm_extra_conf.py'
@@ -303,20 +303,20 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 
-" --- vim-go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <leader>ds <Plug>(go-def-split)
-au FileType go nmap <leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <leader>dt <Plug>(go-def-tab)
-au FileType go nmap <leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <leader>s <Plug>(go-implements)
-au FileType go nmap <leader>e <Plug>(go-rename)
-au FileType go nmap <leader>i <Plug>(go-info)
+" " --- vim-go
+" au FileType go nmap <leader>r <Plug>(go-run)
+" au FileType go nmap <leader>b <Plug>(go-build)
+" au FileType go nmap <leader>t <Plug>(go-test)
+" au FileType go nmap <leader>c <Plug>(go-coverage)
+" au FileType go nmap <leader>ds <Plug>(go-def-split)
+" au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+" au FileType go nmap <leader>dt <Plug>(go-def-tab)
+" au FileType go nmap <leader>gd <Plug>(go-doc)
+" au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+" au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+" au FileType go nmap <leader>s <Plug>(go-implements)
+" au FileType go nmap <leader>e <Plug>(go-rename)
+" au FileType go nmap <leader>i <Plug>(go-info)
 
 " --- nerdcommenter
 let g:NERDSpaceDelims=1
@@ -337,6 +337,6 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']
 let g:syntastic_python_checkers = ['flake8']
 
