@@ -165,7 +165,6 @@ map <C-L> <C-W>l
 " open in new vertical split when find declaration
 map <C-W>] :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
-
 " disable F1
 noremap <F1> <Esc>
 
@@ -281,9 +280,12 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/private/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-autocmd FileType c map <C-]> :YcmCompleter GoTo<CR>
-autocmd FileType cpp map <C-]> :YcmCompleter GoTo<CR>
-autocmd FileType python map <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType cpp nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType python nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType go nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType rust nmap <C-]> :YcmCompleter GoTo<CR>
+nmap  :YcmCompleter FixIt<CR>
 
 " --- nerdtree
 map <F6> :NERDTreeToggle<CR>
