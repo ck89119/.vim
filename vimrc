@@ -277,6 +277,7 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 " --- YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/private/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -323,6 +324,8 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "private"]
 " --- nerdcommenter
 let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign='left'
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDCustomDelimiters = { 'c': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' } }
 
 " --- python-mode
 let g:pymode_run = 0
@@ -341,4 +344,7 @@ set statusline+=%*
 let g:syntastic_check_on_wq = 0
 " let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'gobuild']
 let g:syntastic_python_checkers = ['flake8']
+
+" --- Colorizer
+let g:colorizer_auto_color = 1
 
