@@ -114,18 +114,9 @@ function! HasPaste()
 endfunction
 "}
 
-" GUI color and font settings
-if has("gui_running")
-  if has("unix")
-    let s:uname = system("uname")
-      if s:uname == "Darwin\n"
-        " Do Mac stuff here
-        set guifont=Monaco\ for\ powerline:h12
-      endif
-  endif
-  set background=dark
-  colors solarized
-endif
+" color scheme
+set background=dark
+colorscheme solarized
 
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
